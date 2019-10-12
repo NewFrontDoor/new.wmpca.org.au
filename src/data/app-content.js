@@ -1,7 +1,8 @@
 import img1 from '../assets/Christianity1A.png';
 import img2 from '../assets/CitywideGathering.png';
 import img3 from '../assets/FellowshipGroups.png';
-import UND from '../assets/UND.jpg';
+import slide1 from '../assets/slide1.jpg';
+import slide2 from '../assets/slide2.jpg';
 
 const contact = {
   map: false,
@@ -103,12 +104,28 @@ const portfolio = {
 
 const menu = [
   {
-    link: 'link-one',
-    text: "I'm new"
+    link: 'about',
+    text: 'About Us'
+  },
+  {
+    link: 'newsletter',
+    text: 'Newsletter'
+  },
+  {
+    link: 'connect',
+    text: 'Connect & Network'
+  },
+  {
+    link: 'synergy',
+    text: 'Synergy'
+  },
+  {
+    link: '/sermons',
+    text: 'Sermons'
   },
   {
     link: 'link-two',
-    text: 'About',
+    text: 'Dropdown',
     children: [
       {
         link: 'link-one',
@@ -117,75 +134,13 @@ const menu = [
       {
         link: 'link-one',
         text: 'Philosophy of Ministry'
-      },
-      {
-        link: 'link-one',
-        text: 'Staff'
-      },
-      {
-        link: 'link-one',
-        text: 'Student Committee'
-      },
-      {
-        link: 'link-one',
-        text: 'What We Believe'
-      },
-      {
-        link: 'link-one',
-        text: 'Privacy Policy'
       }
     ]
-  },
-  {
-    link: 'link-three',
-    text: 'Events and ministries',
-    children: [
-      {
-        link: 'link-one',
-        text: 'Christianity 1A and 1B'
-      },
-      {
-        link: 'link-one',
-        text: 'Regular events and programs'
-      },
-      {
-        link: 'link-one',
-        text: 'Conferences'
-      },
-      {
-        link: 'link-one',
-        text: 'Training Programs'
-      },
-      {
-        link: 'link-one',
-        text: 'Full Calendar'
-      }
-    ]
-  },
-  {
-    link: '/sermons',
-    text: 'Sermons'
-  },
-  {
-    link: 'link-four',
-    text: 'Support'
-  },
-  {
-    link: 'link-four',
-    text: 'Alumni'
-  },
-  {
-    link: 'link-four',
-    text: 'International Students'
-  },
-  {
-    link: 'link-four',
-    text: 'Launceston'
   }
 ];
 
-const heading = ['MISSION TO THE UNIVERSITY,', 'MISSIONARIES TO THE WORLD.'];
+const heading = ['WOMENS MINISTRY IN THE', 'PRESBYTERIAN CHURCH OF AUSTRALIA'];
 
-const slides = [{src: UND, alt: 'universe next door'}];
+const slides = [{src: slide1, alt: ''}, {src: slide2, alt: ''}];
 
 export {contact, portfolio, menu, heading, slides};

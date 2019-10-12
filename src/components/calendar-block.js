@@ -15,7 +15,7 @@ const Div = styled.div`
   min-height: 300px;
 `;
 
-export default function SermonContent() {
+export default () =>  {
   return (
     <Grid>
         <Calendar
