@@ -120,6 +120,10 @@ const menu = [
     text: 'Synergy'
   },
   {
+    link: '/calendar',
+    text: 'Calendar'
+  },
+  {
     link: '/sermons',
     text: 'Sermons'
   },
