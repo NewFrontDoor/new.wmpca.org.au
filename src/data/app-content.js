@@ -23,26 +23,17 @@ const contact = {
     [
       {
         heading: 'email',
-        content: 'info@ufcutas.org'
+        content: 'email@email.org'
       },
       {
         heading: 'postal',
         content: [
-          'University Fellowship of Christians',
-          'PO Box 5006',
-          'University of Tasmania LPO',
-          'SANDY BAY TAS 7005'
+          'WOMENS MINISTRY IN THE PRESBYTERIAN CHURCH OF AUSTRALIA',
+          'Line 2',
+          'Line 3',
+          'Line 4'
         ]
       },
-      {
-        heading: 'headquarters',
-        content: [
-          'Wellspring Anglican Church Loft',
-
-          'Level 1, Corner of Grosvenor St and Lord St',
-          'SANDY BAY TAS 7005'
-        ]
-      }
     ],
     [
       {
@@ -120,16 +111,12 @@ const menu = [
     text: 'Synergy'
   },
   {
-    link: '/calendar',
-    text: 'Calendar'
+    link: 'talks',
+    text: 'Talks'
   },
   {
-    link: '/sermons',
-    text: 'Sermons'
-  },
-  {
-    link: 'link-two',
-    text: 'Dropdown',
+    link: 'resources',
+    text: 'Resources',
     children: [
       {
         link: 'link-one',
@@ -143,8 +130,60 @@ const menu = [
   }
 ];
 
+const about =
+  {
+    heading: 'About us',
+    slug: '/about',
+    content: [
+      'The Women’s Ministries of the Presbyterian Church of Australia (WMPCA) is a national committee with members located in NSW, Queensland and Western Australia. We desire to liaise with all states and churches, so please contact us.',
+      'While the WMPCA does not hold regular events, please keep a look out for information about the Conference that we hold once every three years. More information about our next event will be released soon.',
+      'If you have any suggestions about information we have available on this website please contact us and let us know. We appreciate all suggestions.',
+      ' <p>We also have a Facebook page which can be found at <a href="https://www.facebook.com/wmpres/" target="_blank" rel="noreferrer noopener">facebook.com/wmpres</a></p>',
+      '“This is my prayer that your love may abound more and more in knowledge and depth of insight, so that you may be able to discern what is best and may be pure and blameless until the day of Christ, filled with the fruit of righteousness that comes through Jesus Christ— to the glory and praise of God.” Phil 1:9-11      '
+    ]
+  }
+
+const newsletter = {
+    heading: 'Newsletter',
+    slug: '/newsletter',
+    content: [
+      'WMPCA Newsletter 2018 Issue 2',
+      '<a href="http://wmpca.org.au/wp-content/uploads/2018/04/WMPCA-Newsletter-2018-Issue-1-.pdf" target="_blank" rel="noreferrer noopener">WMPCA Newsletter 2018 Issue 1</a>'
+    ]
+  }
+
+const connect =
+  {
+    heading: 'Connect & Network',
+    slug: '/connect',
+    content: [
+      'Here are some contacts of networks within Australia.',
+      '',
+      '<a href="http://womeninministry.org.au/" target="_blank" rel="noreferrer noopener">Victoria</a>',
+      '<a href="http://womenministry.org.au/ministry/" target="_blank" rel="noreferrer noopener">NSW</a>',
+      '<a href="http://pcq.org.au/womens-ministries.php" target="_blank" rel="noreferrer noopener">Queensland</a>',
+      '<a href="http://pcnsw.org.au/index.php/presbyterian-womens-association/" target="_blank" rel="noreferrer noopener">PWA (deadlink)</a>',
+      '<a href="http://pwansw.org.au/pwmu/" target="_blank" rel="noreferrer noopener">PWMU</a>',
+      '<a href="http://www.qtc.edu.au/m2w/" target="_blank" rel="noreferrer noopener">QTC</a>',
+      '<a href="http://www.christcollege.edu.au/course/ministry-training-for-women-mtw/" target="_blank" rel="noreferrer noopener">Christ College (deadlink)</a>',
+      '',
+      'If you would like your page to appear here please contact us.',
+      'Still looking for contacts? Try the <a href="http://preskey.org.au/preskey-find-a-presbyterian-church.html" target="_blank" rel="noreferrer noopener">PresKey</a>'
+    ]
+  }
+
+const synergy = 
+  {
+    heading: 'Synergy (blog?)',
+    slug: '/synergy',
+    content: [
+      'Read or listen to a daily Devotional by John Piper'
+    ]
+  }
+
 const heading = ['WOMENS MINISTRY IN THE', 'PRESBYTERIAN CHURCH OF AUSTRALIA'];
 
 const slides = [{src: slide1, alt: ''}, {src: slide2, alt: ''}];
 
-export {contact, portfolio, menu, heading, slides};
+
+export {contact, portfolio, menu, heading, slides, about, newsletter , connect, synergy};

@@ -8,13 +8,10 @@ import Page from './routes/page';
 import FooterIcons from './components/footer-icons';
 import Footer from './routes/footer';
 import ActionBlock from './components/action-block';
-import SermonBlock from './components/sermon-block';
-import {contact, portfolio, menu, heading, slides} from './data/app-content';
+import TalksBlock from './components/talks-block';
+import {contact, portfolio, menu, heading, slides, about, newsletter, connect, synergy} from './data/app-content';
 import CalendarBlock from './components/calendar-block';
-import AboutBlock from './components/about-block';
-import NewsletterBlock from './components/newsletter-block';
-import ConnectBlock from './components/connect-and-newtwork-block';
-import SynergyBlock from './components/synergy-block';
+import ResourcesBlock from './components/resources-block';
 
 const Container = styled.div`
   margin-right: auto;
@@ -59,12 +56,13 @@ export default function App() {
               />
             )}
           />
-          <Route exact path="/sermons" render={() => <Page heading={['Sermons']} content={<SermonBlock/>}/>} />
-          <Route exact path="/calendar" render={() => <Page heading={['Calendar']} content={<CalendarBlock/>}/>} />
-          <Route exact path="/about" render={() => <Page heading={['About Us']} content={<AboutBlock/>}/>} />
-          <Route exact path="/connect" render={() => <Page heading={['Connect & Network']} content={<ConnectBlock/>}/>} />
-          <Route exact path="/newsletter" render={() => <Page heading={['Newsletter']} content={<NewsletterBlock/>}/>} />
-          <Route exact path="/synergy" render={() => <Page heading={['Synergy']} content={<SynergyBlock/>}/>} />
+          <Route exact path="/talks" render={() => <Page heading={['Talks']} content={<TalksBlock/>}/>} />
+          <Route exact path="/calendar" render={() => <Page heading={['Calendar (Example)']} content={<CalendarBlock/>}/>} />
+          <Route exact path="/about" render={() => <Page pageData={about}/> } />
+          <Route exact path="/connect" render={() => <Page pageData={connect}/>} />
+          <Route exact path="/newsletter" render={() => <Page pageData={newsletter} />} />
+          <Route exact path="/synergy" render={() => <Page pageData={synergy} />} />
+          <Route exact path="/resources" render={() => <Page heading={['Resources']} content={<ResourcesBlock/>}/>} />
           <Route path="/:path" render={() => <Page heading={['New page']} />} />
         </Switch>
       </Container>
