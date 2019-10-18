@@ -122,14 +122,20 @@ export default function Menu({items}) {
           );
         })}
       </Core>
-      <SelectMenu name="pets" id="pet-select">
+      <SelectMenu name="menu" id="menu-select">
         <option value="">--Please choose an option--</option>
-        <option value="dog">Dog</option>
-        <option value="cat">Cat</option>
-        <option value="hamster">Hamster</option>
-        <option value="parrot">Parrot</option>
-        <option value="spider">Spider</option>
-        <option value="goldfish">Goldfish</option>
+        {items.map(item => {
+          return (
+            <React.Fragment>
+              <option value={item.link}>{item.children ? item.text + ' »' : item.text}</option>
+              {item.children ? item.children.map(child => {
+                return (
+                  <option value={child.link}>– {child.text}</option>
+                )
+              }) : ''}
+            </React.Fragment>
+          )
+        })}
       </SelectMenu>
     </>
   );
