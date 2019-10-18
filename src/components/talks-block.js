@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import {LatestSermonContainerDrupal, RecentSeries, LatestSermon, FeaturedSeries, CurrentSeries, SermonSeriesList} from '@newfrontdoor/sermon'
+import { LatestSermonContainerDrupal, RecentSeries, LatestSermon, FeaturedSeries, CurrentSeries, SermonSeriesList } from '@newfrontdoor/sermon'
 import seriesSermonList from '@newfrontdoor/sermon/dist/series-sermon-list';
 
 
@@ -17,8 +17,8 @@ const Div = styled.div`
 export default function SermonContent() {
   return (
     <Grid>
-    <LatestSermonContainerDrupal />
-    {/*<RecentSeries/>
+      {/*<LatestSermonContainerDrupal />
+    <RecentSeries/>
     <LatestSermon/>
     <FeaturedSeries/>
     <CurrentSeries/>

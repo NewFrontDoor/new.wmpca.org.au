@@ -12,15 +12,15 @@ const Wrapper = styled.article`
   min-height: 550px;
 `;
 
-export default function Page({heading, content, slug, pageData}) {
+export default function Page({ heading, content, slug, pageData }) {
   return (
     <Grid>
       <Header heading={heading ? heading : [pageData.heading]} />
       <Wrapper>
         {content}
-        {pageData ? pageData.content.map( item => <p>{item}</p>) : ''}
+        {pageData ? pageData.content.map(item => <p dangerouslySetInnerHTML={{ __html: item }}></p>) : ''}
       </Wrapper>
-      </Grid>
+    </Grid>
   );
 }
 
