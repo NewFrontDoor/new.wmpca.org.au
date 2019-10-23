@@ -103,12 +103,8 @@ const menu = [
     text: 'Newsletter'
   },
   {
-    link: 'connect',
-    text: 'Connect & Network'
-  },
-  {
-    link: 'synergy',
-    text: 'Synergy'
+    link: 'blog',
+    text: 'blog'
   },
   {
     link: 'talks',
@@ -119,12 +115,8 @@ const menu = [
     text: 'Resources',
     children: [
       {
-        link: 'link-one',
-        text: 'Our Ministry Partners'
-      },
-      {
-        link: 'link-one',
-        text: 'Philosophy of Ministry'
+        link: 'connect',
+        text: 'Connect & Network'
       }
     ]
   }
@@ -172,12 +164,12 @@ const connect =
     ]
   }
 
-const synergy = 
+const blog = 
   {
-    heading: 'Synergy (blog?)',
-    slug: '/synergy',
+    heading: 'Blog',
+    slug: '/blog',
     content: [
-      'Read or listen to a daily Devotional by John Piper'
+      ''
     ]
   }
 
@@ -186,4 +178,4 @@ const heading = ['WOMENS MINISTRY IN THE', 'PRESBYTERIAN CHURCH OF AUSTRALIA'];
 const slides = [{src: slide1, alt: ''}, {src: slide2, alt: ''}];
 
 
-export {contact, portfolio, menu, heading, slides, about, newsletter , connect, synergy};
+export {contact, portfolio, menu, heading, slides, about, newsletter , connect, blog};

@@ -9,7 +9,7 @@ import FooterIcons from './components/footer-icons';
 import Footer from './routes/footer';
 import ActionBlock from './components/action-block';
 import TalksBlock from './components/talks-block';
-import {contact, portfolio, menu, heading, slides, about, newsletter, connect, synergy} from './data/app-content';
+import {contact, portfolio, menu, heading, slides, about, newsletter, connect, blog} from './data/app-content';
 import CalendarBlock from './components/calendar-block';
 import ResourcesBlock from './components/resources-block';
 
@@ -61,7 +61,7 @@ export default function App() {
           <Route exact path="/about" render={() => <Page pageData={about}/> } />
           <Route exact path="/connect" render={() => <Page pageData={connect}/>} />
           <Route exact path="/newsletter" render={() => <Page pageData={newsletter} />} />
-          <Route exact path="/synergy" render={() => <Page pageData={synergy} />} />
+          <Route exact path="/blog" render={() => <Page pageData={blog} />} />
           <Route exact path="/resources" render={() => <Page heading={['Resources']} content={<ResourcesBlock/>}/>} />
           <Route path="/:path" render={() => <Page heading={['New page']} />} />
         </Switch>
@@ -81,12 +81,10 @@ export default function App() {
           </div>
         </FooterBox>
         <FooterIcons
-          facebook={{url: 'test'}}
+          facebook={{url: 'https://www.facebook.com/wmpres/'}}
           twitter={{url: 'test'}}
           instagram={{url: 'test'}}
-          vimeo={{url: 'test'}}
           podcast={{url: 'test'}}
-          elvanto={{url: 'test'}}
           login={{url: 'test'}}
         />
         <FooterBox area="sidebar2">
