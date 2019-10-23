@@ -23,7 +23,7 @@ const contact = {
     [
       {
         heading: 'email',
-        content: 'email@email.org'
+        content: 'name@wmpca.org.au'
       },
       {
         heading: 'postal',
@@ -131,7 +131,10 @@ const about =
       'While the WMPCA does not hold regular events, please keep a look out for information about the Conference that we hold once every three years. More information about our next event will be released soon.',
       'If you have any suggestions about information we have available on this website please contact us and let us know. We appreciate all suggestions.',
       ' <p>We also have a Facebook page which can be found at <a href="https://www.facebook.com/wmpres/" target="_blank" rel="noreferrer noopener">facebook.com/wmpres</a></p>',
-      '“This is my prayer that your love may abound more and more in knowledge and depth of insight, so that you may be able to discern what is best and may be pure and blameless until the day of Christ, filled with the fruit of righteousness that comes through Jesus Christ— to the glory and praise of God.” Phil 1:9-11      '
+      '“This is my prayer that your love may abound more and more in knowledge and depth of insight, so that you may be able to discern what is best and may be pure and blameless until the day of Christ, filled with the fruit of righteousness that comes through Jesus Christ— to the glory and praise of God.” Phil 1:9-11',
+      '<br/>Contact Details:',
+      'Email: name@wmpca.org.au<br/>Phone: xxxx xxx xxx'
+
     ]
   }
 
