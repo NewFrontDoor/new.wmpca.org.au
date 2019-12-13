@@ -15,8 +15,7 @@ export default () =>  {
   return (
     <Div>
       <ResourceLinks>
-        <li><Link to="/resources">Our Ministry Partners</Link></li>
-        <li><Link to="/resources">Philosophy of Ministry</Link></li>
+        <li><Link to="/connect">Connect & Network</Link></li>
       </ResourceLinks>
     </Div>
   );

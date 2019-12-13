@@ -9,6 +9,8 @@
     "@newfrontdoor/calendar": "^1.4.8",
     "@newfrontdoor/carousel": "^1.0.0",
     "@newfrontdoor/sermon": "0.2.0",
+    "@sanity/block-content-to-react": "^2.0.7",
+    "@sanity/client": "^0.147.0",
     "emotion-theming": "^10.0.10",
     "mineral-ui": "^0.58.0",
     "react": "^16.10.1",

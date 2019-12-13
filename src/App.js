@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import styled from '@emotion/styled';
 import {LatestSermon} from '@newfrontdoor/sermon';
@@ -12,6 +12,9 @@ import TalksBlock from './components/talks-block';
 import {contact, portfolio, menu, heading, slides, about, newsletter, connect, blog} from './data/app-content';
 import CalendarBlock from './components/calendar-block';
 import ResourcesBlock from './components/resources-block';
+import SanityPage from './routes/sanity-page';
+
+import sanity from './lib/sanity';
 
 const Container = styled.div`
   margin-right: auto;
@@ -38,6 +41,53 @@ const FooterBox = styled.div`
 `;
 
 export default function App() {
+  const [pagesData, setPagesData] = useState(null);
+  const [pagesFetched, setPagesFetched] = useState(false);
+  const pagesQuery = `
+  *[_type == "page"] {
+    ...,
+      body[]{
+        ...,
+        _type == 'reference' => @-> {
+          ...,
+          blocks[] {
+            ...,
+            _type == 'reference' => @ ->
+          }
+        },
+        markDefs[] {
+          ...,
+          _type == 'internalLink' => {
+              'slug': @.reference->slug.current
+          }
+        }
+      },
+      'id': _id,
+    'pathname': '/' + slug.current
+  }
+`;
+
+useEffect(() => {
+  async function fetchData() {
+    const result = await sanity.fetch(pagesQuery);
+
+    const arrayToObject = array =>
+      array.reduce((obj, item) => {
+        obj[item.slug.current] = item;
+        return obj;
+      }, {});
+
+    const pagesObject = arrayToObject(result);
+    console.log(pagesObject)
+    setPagesData(pagesObject);
+    setPagesFetched(true);
+  }
+  if(pagesFetched === false){
+    fetchData();
+  }
+  
+}, [pagesFetched, pagesData]);
+
   return (
     <BrowserRouter>
       <Container>
@@ -56,13 +106,9 @@ export default function App() {
               />
             )}
           />
-          <Route exact path="/talks" render={() => <Page heading={['Talks']} content={<TalksBlock/>}/>} />
           <Route exact path="/calendar" render={() => <Page heading={['Calendar (Example)']} content={<CalendarBlock/>}/>} />
-          <Route exact path="/about" render={() => <Page pageData={about}/> } />
-          <Route exact path="/connect" render={() => <Page pageData={connect}/>} />
-          <Route exact path="/newsletter" render={() => <Page pageData={newsletter} />} />
-          <Route exact path="/blog" render={() => <Page pageData={blog} />} />
           <Route exact path="/resources" render={() => <Page heading={['Resources']} content={<ResourcesBlock/>}/>} />
+          <Route exact path="/:slug" render={({match}) => <SanityPage slug={match.params.slug} pageData={pagesData ? pagesData[match.params.slug] : undefined}/>} />
           <Route path="/:path" render={() => <Page heading={['New page']} />} />
         </Switch>
       </Container>
