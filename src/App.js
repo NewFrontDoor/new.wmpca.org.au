@@ -78,7 +78,6 @@ useEffect(() => {
       }, {});
 
     const pagesObject = arrayToObject(result);
-    console.log(pagesObject)
     setPagesData(pagesObject);
     setPagesFetched(true);
   }
@@ -107,7 +106,6 @@ useEffect(() => {
             )}
           />
           <Route exact path="/calendar" render={() => <Page heading={['Calendar (Example)']} content={<CalendarBlock/>}/>} />
-          <Route exact path="/resources" render={() => <Page heading={['Resources']} content={<ResourcesBlock/>}/>} />
           <Route exact path="/:slug" render={({match}) => <SanityPage slug={match.params.slug} pageData={pagesData ? pagesData[match.params.slug] : undefined}/>} />
           <Route path="/:path" render={() => <Page heading={['New page']} />} />
         </Switch>
@@ -127,11 +125,13 @@ useEffect(() => {
           </div>
         </FooterBox>
         <FooterIcons
-          facebook={{url: 'https://www.facebook.com/wmpres/'}}
-          twitter={{url: 'test'}}
+          
+          /*twitter={{url: 'test'}}
           instagram={{url: 'test'}}
           podcast={{url: 'test'}}
-          login={{url: 'test'}}
+            login={{url: 'test'}}*/
+
+          facebook={{url: 'https://www.facebook.com/wmpres/'}}
         />
         <FooterBox area="sidebar2">
           <LatestSermon
@@ -141,7 +141,7 @@ useEffect(() => {
           />
         </FooterBox>
         <FooterBox area="tertiary">
-          <p>Bla bla bla bla bla bla bla bla bla bla</p>
+          <p></p>
         </FooterBox>
       </Footer>
     </BrowserRouter>

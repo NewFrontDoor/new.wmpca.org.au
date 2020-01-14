@@ -27,15 +27,12 @@ const serializers = {
 export default function SanityPage({slug, pageData}) {
   const [data, setData] = useState(pageData);
   const [dataFetched, setDataFetched] = useState(Boolean(pageData));
-  console.log("pagedata")
-  console.log(pageData)
 
   const pageQuery = `
     *[_type == "page" && slug.current match '${slug}']
   `;
 
   useEffect(() => {
-    console.log(pageData)
     const fetchData = async () => {
       const result = await sanity.fetch(pageQuery);
       setData(result[0]);

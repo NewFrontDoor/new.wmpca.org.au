@@ -23,7 +23,7 @@ const contact = {
     [
       {
         heading: 'email',
-        content: 'name@wmpca.org.au'
+        content: 'admin@wmpca.org.au',
       },
       {
         heading: 'postal',
@@ -99,26 +99,24 @@ const menu = [
     text: 'About Us'
   },
   {
+    link: 'get-in-touch',
+    text: 'Get in Touch'
+  },
+  {
     link: 'newsletter',
     text: 'Newsletter'
   },
   {
     link: 'blog',
-    text: 'blog'
-  },
-  {
-    link: 'talks',
-    text: 'Talks'
+    text: 'Blog'
   },
   {
     link: 'resources',
-    text: 'Resources',
-    children: [
-      {
-        link: 'connect',
-        text: 'Connect & Network'
-      }
-    ]
+    text: 'Resources'
+  },
+  {
+    link: 'connect',
+    text: 'Connect & Network'
   }
 ];
 
