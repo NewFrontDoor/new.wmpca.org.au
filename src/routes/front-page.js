@@ -5,6 +5,7 @@ import Contact from '../templates/contact';
 import Panels from '../components/panels';
 import Portfolio from '../components/portfolio';
 import Header from '../components/header';
+import Welcome from '../components/welcome';
 
 const Slide = styled.img`
   width: 100%;
@@ -20,7 +21,8 @@ export default function FrontPage({
   panels,
   portfolio,
   contact,
-  slides
+  slides,
+  welcome
 }) {
   return (
     <Grid>
@@ -37,6 +39,7 @@ export default function FrontPage({
 
       {portfolio && <Portfolio portfolio={portfolio} />}
       {contact && <Contact map={contact.map} contact={contact.content} />}
+      {welcome && <Welcome welcome={welcome} />}
     </Grid>
   );
 }

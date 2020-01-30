@@ -11,9 +11,9 @@ const Grid = styled.div`
   gap: 20px;
 `;
 
-const Div = styled.div`
+/*const Div = styled.div`
   min-height: 300px;
-`;
+`;*/
 
 export default () =>  {
   return (

@@ -81,7 +81,7 @@ export default function Portfolio({portfolio: {heading, content}}) {
         {content.map(({image, heading, description}) => {
           return (
             <Item key={heading}>
-              <img src={image} />
+              <img src={image} alt="" />
               <Mask>
                 <h3>{heading}</h3>
                 <p>{description}</p>

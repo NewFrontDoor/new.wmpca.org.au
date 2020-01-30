@@ -20,7 +20,14 @@ const Block = styled.div`
   }
 `;
 
-export default function ActionBlock({heading, content, action}) {
+const ExternalLink = styled.a`
+color: #797979;
+:hover{
+  color: #fff;
+}
+`;
+
+export default function ActionBlock({heading, content, action, url}) {
   return (
     <Block>
       <h4>{heading}</h4>
@@ -35,6 +42,7 @@ export default function ActionBlock({heading, content, action}) {
           : content}
       </p>
       {action && <Button to={action.to}>{action.text}</Button>}
+      {url && <ExternalLink href={url.href} target="_blank" rel="noreferrer noopener">{url.text}</ExternalLink>}
     </Block>
   );
 }

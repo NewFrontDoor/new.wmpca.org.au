@@ -24,7 +24,7 @@ export default function Contact({map, contact}) {
         <div className="row">
           <div className="span10">
             <div id="google_map">
-              <iframe width="1170" height="370" src="" />
+              <iframe width="1170" height="370" src="" title="Google Map" />
               <br />
             </div>
           </div>

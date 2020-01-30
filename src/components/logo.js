@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import {Link} from 'react-router-dom';
-import {ReactComponent as LogoImg} from '../assets/logo.svg';
+//import {ReactComponent as LogoImg} from '../assets/logo.svg';
 import wmpcaLogo from '../assets/WMPCA_vertical_Lrg.jpg'
 
 const MainTitle = styled.div`
