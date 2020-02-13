@@ -126,7 +126,7 @@ export default function Menu({items}) {
         <option value="">--Please choose an option--</option>
         {items.map(item => {
           return (
-            <React.Fragment>
+            <React.Fragment key={item.text}>
               <option value={item.link}>{item.children ? item.text + ' »' : item.text}</option>
               {item.children ? item.children.map(child => {
                 return (

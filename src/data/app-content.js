@@ -23,9 +23,10 @@ const contact = {
     [
       {
         heading: 'email',
-        content: 'admin@wmpca.org.au',
+        content: '',
+        url: {text: 'admin@wmpca.org.au', href: 'mailto:admin@wmpca.org.au'}
       },
-      {
+      /*{
         heading: 'postal',
         content: [
           'WOMENS MINISTRY IN THE PRESBYTERIAN CHURCH OF AUSTRALIA',
@@ -33,7 +34,7 @@ const contact = {
           'Line 3',
           'Line 4'
         ]
-      },
+      },*/
     ],
     [
       {
@@ -178,5 +179,15 @@ const heading = ['WOMENS MINISTRY IN THE', 'PRESBYTERIAN CHURCH OF AUSTRALIA'];
 
 const slides = [{src: slide1, alt: ''}, {src: slide2, alt: ''}];
 
+const welcome = {
+  heading: 'Welcome',
+  content: [
+      'Welcome to the website for Women’s Ministry in the Presbyterian Church of Australia (WMPCA). We exist to encourage church leadership and women within the Presbyterian Church of Australia (PCA) to nurture and encourage women in their walk with Christ so that they have a deeper relationship with him. We do this by encouraging men and women within the PCA to glorify God by working together in a Biblical partnership.',
+      'This website is a place where women and men can easily access resources for thinking about what it looks like for men and women to be in biblical partnership serving the Lord together. You’ll find links to articles that the committee believes are helpful for thinking through issues related to men and women working in ministry together, the particular opportunities and challenges that women in ministry have, and broader discussion about gender in the bible and the culture around us. You’ll also find regular blog posts from committee members and others to write about these issues. You can easily find your way around the website using the links in the navigation bar at the top of this page.',
+      'It\'s our hope that this website will be a blessing to all those thinking through these vital issues for God-honoring ministry in Australia. If you have any feedback, particular topics that you’d like to see addressed, or would like to contact someone on the committee to talk more about your local context and how these issues relate to your ministry context, you can contact us at <a href="mailto:committee@wmpca.org.au">committee@wmpca.org.au</a>'    
+    ]
+};
 
-export {contact, portfolio, menu, heading, slides, about, newsletter , connect, blog};
+
+
+export {contact, portfolio, menu, heading, slides, about, newsletter , connect, blog, welcome};
