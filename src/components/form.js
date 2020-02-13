@@ -108,7 +108,7 @@ function getFormField(field) {
 
 export default function Form({title, id, description, fields}) {
   return (
-    <form id={id}>
+    <form id={id} onSubmit={(e) => {e.preventDefault()}}>
       <fieldset>
         <h2>{title}</h2>
         <Grid>

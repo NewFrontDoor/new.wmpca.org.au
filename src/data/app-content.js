@@ -100,10 +100,6 @@ const menu = [
     text: 'About Us'
   },
   {
-    link: 'get-in-touch',
-    text: 'Get in Touch'
-  },
-  {
     link: 'newsletter',
     text: 'Newsletter'
   },

@@ -68,6 +68,9 @@ const pagesQuery = `
       },
     asset->
     },
+		mainImage{
+      asset->
+    },
     'id': _id,
   'pathname': '/' + slug.current
 }
